@@ -286,7 +286,6 @@ MIT
 
 Muhammad Hanan
 - GitHub: [@abdulhannan7826114-prog](https://github.com/abdulhannan7826114-prog)
-- Email: [Your Email]
 
 ## 🤝 Contributing
 
