@@ -19,6 +19,19 @@ app.use(cors());
 app.use(express.json());
 app.use(requestLogger);
 
+// Serve frontend static files
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+// API routes
+app.use('/api/auth', authRoutes);
+app.use('/api/tasks', taskRoutes);
+
+// Serve index.html for all non-API routes (for React Router)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
 
